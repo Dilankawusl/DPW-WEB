@@ -1,587 +1,663 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dilanka Wijesena | Engineer · Researcher · Lecturer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link href="styles.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dilanka Wijesena | Engineer · Researcher · Lecturer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
 </head>
+
 <body>
 
-<!-- BACKGROUND CANVAS -->
-<canvas id="bg-canvas"></canvas>
+  <!-- BACKGROUND CANVAS -->
+  <canvas id="bg-canvas"></canvas>
 
-<!-- NAV -->
-<nav>
-  <div class="container nav-inner">
-    <a href="#" class="nav-logo">Dilanka <span>Wijesena</span></a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#publications">Research</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
-      <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-      <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-    </button>
-  </div>
-</nav>
+  <!-- NAV -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">Dilanka <span>Wijesena</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#publications">Research</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
 
-<!-- HERO -->
-<div class="hero container">
-  <div class="hero-left">
-    <div class="hero-eyebrow">
-      <div class="hero-eyebrow-line"></div>
-      Engineer · Researcher · Lecturer
-    </div>
-    <h1 class="hero-name">
-      <em>Dilanka</em>
-      <strong>Wijesena</strong>
-    </h1>
-    <p class="hero-tagline">
-      <span>MSc AI</span> · University of Moratuwa &nbsp;|&nbsp;
-      <span>Lecturer</span> · SLIIT City Uni<br>
-      <span>IEEE Published</span> · First Class Honours · Gold Medalist
-    </p>
-    <p class="hero-desc">
-      Lecturer and researcher passionate about transforming innovative ideas into intelligent, real-world solutions. My expertise spans AI, Machine Learning, Embedded Systems, and IoT, with a strong focus on bridging the gap between theoretical research and practical, impactful engineering.
-    </p>
-    <div class="hero-actions">
-      <a href="#publications" class="btn-ink">View Research ↓</a>
-      <a href="#contact" class="btn-outline">Get in Touch</a>
-    </div>
-    <div class="hero-socials">
-      <a href="https://www.linkedin.com/in/dilanka-wijesena-457183203" target="_blank" class="social-pill">
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-        LinkedIn
-      </a>
-      <a href="https://github.com/Dilankawusl" target="_blank" class="social-pill">
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-        GitHub
-      </a>
-      <a href="https://scholar.google.com/citations?user=a5Djx7QAAAAJ&hl=en&authuser=1" target="_blank" class="social-pill">
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
-        Scholar
-      </a>
-    </div>
-  </div>
-
-  <div class="hero-right">
-    <div class="hero-photo-stack">
-      <div class="photo-main">
-        <img src="Dilanka.jpeg" alt="Dilanka Wijesena" onerror="this.parentElement.style.background='#e8e4da'">
+  <!-- HERO -->
+  <div class="hero container">
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-line"></div>
+        Engineer · Researcher · Lecturer
       </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- AWARD BANNER -->
-<div class="award-banner">
-  <div class="award-icon">🏅</div>
-  <div class="award-text">
-    <strong>Abans Engineering Gold Medal — Best Performance in Engineering Technology</strong>
-    <span>Bachelor of Engineering Technology Honours in Electrotechnology · Faculty of Technology · 2016/17 Batch · Wayamba University of Sri Lanka · Awarded at Convocation, 9th August 2023</span>
-  </div>
-</div>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="container">
-    <div class="s-label reveal">About Me</div>
-    <h2 class="s-title reveal"><em>Dilanka</em> Wijesena</h2>
-    
-    <div class="about-grid">
-      <div class="about-content reveal reveal-delay-1">
-        <p class="about-text">
-          I am Dilanka Wijesena, a Lecturer and researcher passionate about transforming innovative ideas into intelligent real-world solutions. My interests span Artificial Intelligence, Machine Learning, Robotics, Embedded Systems, and IoT, with a strong focus on integrating modern AI technologies with practical engineering applications to create impactful and future-oriented systems.
-        </p>
-        <p class="about-text">
-          Beyond research and development, I am actively involved in academic teaching, student mentoring, and research supervision, helping students build both technical knowledge and problem-solving skills. I enjoy collaborating on innovative projects, exploring emerging technologies, and contributing to the growth of technology-driven education and research.
-        </p>
-        <p class="about-text">
-          Driven by curiosity and continuous learning, I strive to bridge the gap between theory and practical innovation while developing solutions that can make a meaningful impact on society.
-        </p>
+      <h1 class="hero-name">
+        <em>Jerith</em>
+        <strong>Wijesena</strong>
+      </h1>
+      <p class="hero-tagline">
+        <span>MSc AI</span> · University of Moratuwa &nbsp;|&nbsp;
+        <span>Lecturer</span> · SLIIT City Uni<br>
+        <span>IEEE Published</span> · First Class Honours · Gold Medalist
+      </p>
+      <p class="hero-desc">
+        Lecturer and researcher passionate about transforming innovative ideas into intelligent, real-world solutions.
+        My expertise spans AI, Machine Learning, Embedded Systems, and IoT, with a strong focus on bridging the gap
+        between theoretical research and practical, impactful engineering.
+      </p>
+      <div class="hero-actions">
+        <a href="#publications" class="btn-ink">View Research ↓</a>
+        <a href="#contact" class="btn-outline">Get in Touch</a>
       </div>
-
-      <div class="about-image-wrap reveal reveal-delay-2">
-        <img src="RUW_3922.jpg" alt="Dilanka Wijesena Graduation">
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/dilanka-wijesena-457183203" target="_blank" class="social-pill">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/Dilankawusl" target="_blank" class="social-pill">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+          </svg>
+          GitHub
+        </a>
+        <a href="https://scholar.google.com/citations?user=a5Djx7QAAAAJ&hl=en&authuser=1" target="_blank"
+          class="social-pill">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 14l9-5-9-5-9 5 9 5z" />
+            <path
+              d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+          </svg>
+          Scholar
+        </a>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- PUBLICATIONS -->
-<section id="publications">
-  <div class="container">
-    <div class="s-label reveal">Peer-Reviewed Research</div>
-    <h2 class="s-title reveal">Academic <em>Publications</em></h2>
-    <div class="pub-list">
-
-      <div class="pub-item reveal">
-        <div class="pub-year">2025</div>
-        <div>
-          <a href="https://scholar.google.com/citations?user=a5Djx7QAAAAJ&hl=en&authuser=1" target="_blank" class="pub-title">End-to-End Deep Learning for Lane Keeping Assist on Unmarked Sri Lankan Roads</a>
-          <div class="pub-authors">L. Jerith, D. P. Wijesena, L. Benorith, A. L. Josheph — School of Engineering, SLIIT City Uni</div>
-          <span class="pub-venue-tag">IEEE ICIIS 2025 · University of Peradeniya · Dec 2025</span>
-        </div>
-        <span class="pub-badge badge-ieee">IEEE 2025</span>
-      </div>
-
-      <div class="pub-item reveal reveal-delay-1">
-        <div class="pub-year">2023</div>
-        <div>
-          <a href="https://scholar.google.com/citations?user=a5Djx7QAAAAJ&hl=en&authuser=1" target="_blank" class="pub-title">Transformer Load Forecasting Method Based on SARIMA, FBProphet and LSTM Models</a>
-          <div class="pub-authors">D. P. Wijesena, K. Bandara, P. Tennakoon, B. Wickramasinghe — Wayamba University & Ceylon Electricity Board</div>
-          <span class="pub-venue-tag">IEEE ICIIS 2023 · University of Peradeniya · Aug 2023</span>
-        </div>
-        <span class="pub-badge badge-ieee">IEEE 2023</span>
-      </div>
-
-      <div class="pub-item reveal reveal-delay-2">
-        <div class="pub-year">2021</div>
-        <div>
-          <a href="https://scholar.google.com/citations?user=a5Djx7QAAAAJ&hl=en&authuser=1" target="_blank" class="pub-title">Design of an Automatic Body Temperature Measurement and Hand Sanitizing System with Access Controlling</a>
-          <div class="pub-authors">D. P. Wijesena, D. G. Darshani, S. W. M. Wickramasinghe — Dept. of Electrotechnology, Wayamba University</div>
-          <span class="pub-venue-tag">ICIET 2021 · pp. 42–49</span>
-        </div>
-        <span class="pub-badge badge-conf">Conference</span>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="container">
-    <div class="s-label reveal">Selected Work</div>
-    <h2 class="s-title reveal">Projects & <em>Research</em></h2>
-    <div class="projects-masonry">
-
-      <div class="proj-card reveal">
-        <div class="proj-num">01</div>
-        <div class="proj-status">
-          <div class="proj-status-dot dot-done"></div>
-          <span class="proj-status-text">Completed 2025</span>
-        </div>
-        <h3 class="proj-title">Disagreement-Driven AI–Human Interaction Framework</h3>
-        <div class="proj-img-wrap">
-          <img src="assets/proj1.png" alt="Disagreement-Driven AI–Human Interaction Framework">
-        </div>
-        <p class="proj-desc">A safety framework pairing human input with CNN predictions. When divergence exceeds a defined threshold, life-critical alerts are issued to the driver — applied to lane keeping on unmarked Sri Lankan roads.</p>
-        <div class="proj-tags">
-          <span class="proj-tag">Deep Learning</span>
-          <span class="proj-tag">CNN</span>
-          <span class="proj-tag">Human-AI Safety</span>
-          <span class="proj-tag">Autonomous Driving</span>
-        </div>
-      </div>
-
-      <div class="proj-card reveal reveal-delay-1">
-        <div class="proj-num">02</div>
-        <div class="proj-status">
-          <div class="proj-status-dot" style="background:#2c8a5f"></div>
-          <span class="proj-status-text">Ongoing</span>
-        </div>
-        <h3 class="proj-title">ML-Based Backup Battery Management Unit</h3>
-        <div class="proj-img-wrap">
-          <img src="assets/proj2.png" alt="ML-Based Backup Battery Management Unit">
-        </div>
-        <p class="proj-desc">Intelligent BMS leveraging machine learning for predictive health monitoring, optimal charging strategies, and real-time fault detection in backup power systems.</p>
-        <div class="proj-tags">
-          <span class="proj-tag">Machine Learning</span>
-          <span class="proj-tag">BMS</span>
-          <span class="proj-tag">IoT</span>
-          <span class="proj-tag">Power Electronics</span>
-        </div>
-      </div>
-
-      <div class="proj-card reveal reveal-delay-2">
-        <div class="proj-num">03</div>
-        <div class="proj-status">
-          <div class="proj-status-dot dot-done"></div>
-          <span class="proj-status-text">Completed 2025</span>
-        </div>
-        <h3 class="proj-title">Robust Anti-Theft System Counteracting CAN Bus Vulnerabilities</h3>
-        <div class="proj-img-wrap">
-          <img src="assets/proj3.png" alt="Robust Anti-Theft System Counteracting CAN Bus Vulnerabilities">
-        </div>
-        <p class="proj-desc">Vehicle security system designed to detect and prevent modern CAN Bus-based theft through cryptographic anomaly detection and real-time intervention. Supervised undergraduate project.</p>
-        <div class="proj-tags">
-          <span class="proj-tag">CAN Bus</span>
-          <span class="proj-tag">Cybersecurity</span>
-          <span class="proj-tag">Embedded C</span>
-          <span class="proj-tag">Automotive</span>
-        </div>
-      </div>
-
-      <div class="proj-card reveal">
-        <div class="proj-num">04</div>
-        <div class="proj-status">
-          <div class="proj-status-dot dot-done"></div>
-          <span class="proj-status-text">Completed 2022</span>
-        </div>
-        <h3 class="proj-title">Transformer Maintenance Optimisation — Ceylon Electricity Board</h3>
-        <div class="proj-img-wrap">
-          <img src="assets/proj4.png" alt="Transformer Maintenance Optimisation — Ceylon Electricity Board">
-        </div>
-        <p class="proj-desc">Individual research for CEB: developed SARIMA, FB-Prophet, and LSTM forecasting models for 4 interconnected 132kV grid substations, plus a web app for maintenance scheduling. LSTM achieved ~70.4% avg improvement.</p>
-        <div class="proj-tags">
-          <span class="proj-tag">LSTM</span>
-          <span class="proj-tag">SARIMA</span>
-          <span class="proj-tag">FB-Prophet</span>
-          <span class="proj-tag">Power Systems</span>
-          <span class="proj-tag">IEEE Published</span>
-        </div>
-      </div>
-
-      <div class="proj-card reveal reveal-delay-1">
-        <div class="proj-num">05</div>
-        <div class="proj-status">
-          <div class="proj-status-dot dot-done"></div>
-          <span class="proj-status-text">Completed 2021</span>
-        </div>
-        <h3 class="proj-title">Raccoon AI Business Intelligence Platform — Sri Lanka Telecom</h3>
-        <div class="proj-img-wrap">
-          <img src="assets/proj5.png" alt="Raccoon AI Business Intelligence Platform — Sri Lanka Telecom">
-        </div>
-        <p class="proj-desc">Enterprise ML platform for SLT running production machine learning workloads. Integrated pre-programmed algorithms, interactive dataset exploration, GPS bus tracking via IoT, and scalable data visualisations.</p>
-        <div class="proj-tags">
-          <span class="proj-tag">Python</span>
-          <span class="proj-tag">ML Platform</span>
-          <span class="proj-tag">IoT / GPS</span>
-          <span class="proj-tag">Data Analytics</span>
-        </div>
-      </div>
-
-      <div class="proj-card reveal reveal-delay-2">
-        <div class="proj-num">06</div>
-        <div class="proj-status">
-          <div class="proj-status-dot dot-done"></div>
-          <span class="proj-status-text">Completed 2020 · Published</span>
-        </div>
-        <h3 class="proj-title">Automatic Temperature Measurement & Hand Sanitizer with Access Control</h3>
-        <div class="proj-img-wrap">
-          <img src="assets/proj6.png" alt="Automatic Temperature Measurement & Hand Sanitizer with Access Control">
-        </div>
-        <p class="proj-desc">Arduino-based non-contact COVID-19 safety system combining MLX90614 temperature sensing, ultrasonic detection, automated sanitization, and occupancy-based gate control. Published at ICIET 2021.</p>
-        <div class="proj-tags">
-          <span class="proj-tag">Arduino</span>
-          <span class="proj-tag">Sensors</span>
-          <span class="proj-tag">Embedded</span>
-          <span class="proj-tag">COVID-19</span>
-          <span class="proj-tag">Published</span>
+    <div class="hero-right">
+      <div class="hero-photo-stack">
+        <div class="photo-main">
+          <img src="Dilanka.jpeg" alt="Dilanka Wijesena" onerror="this.parentElement.style.background='#e8e4da'">
         </div>
       </div>
 
     </div>
   </div>
-</section>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-  <div class="container">
-    <div class="s-label reveal">Career</div>
-    <h2 class="s-title reveal"><em>Professional</em> Experience</h2>
-    <div class="exp-grid">
-      <div class="exp-sidebar reveal">
-        <p class="exp-sidebar-title">Positions held</p>
-        <ul class="exp-filter">
-          <li class="active">Academic</li>
-          <li>Engineering</li>
-          <li>Research</li>
-          <li>Internship</li>
-        </ul>
+  <!-- AWARD BANNER -->
+  <div class="award-banner">
+    <div class="award-icon">🏅</div>
+    <div class="award-text">
+      <strong>Abans Engineering Gold Medal — Best Performance in Engineering Technology</strong>
+      <span>Bachelor of Engineering Technology Honours in Electrotechnology · Faculty of Technology · 2016/17 Batch ·
+        Wayamba University of Sri Lanka · Awarded at Convocation, 9th August 2023</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="s-label reveal">About Me</div>
+      <h2 class="s-title reveal"><em>Dilanka</em> Wijesena</h2>
+
+      <div class="about-grid">
+        <div class="about-content reveal reveal-delay-1">
+          <p class="about-text">
+            I am Dilanka Wijesena, a Lecturer and researcher passionate about transforming innovative ideas into
+            intelligent real-world solutions. My interests span Artificial Intelligence, Machine Learning, Robotics,
+            Embedded Systems, and IoT, with a strong focus on integrating modern AI technologies with practical
+            engineering applications to create impactful and future-oriented systems.
+          </p>
+          <p class="about-text">
+            Beyond research and development, I am actively involved in academic teaching, student mentoring, and
+            research supervision, helping students build both technical knowledge and problem-solving skills. I enjoy
+            collaborating on innovative projects, exploring emerging technologies, and contributing to the growth of
+            technology-driven education and research.
+          </p>
+          <p class="about-text">
+            Driven by curiosity and continuous learning, I strive to bridge the gap between theory and practical
+            innovation while developing solutions that can make a meaningful impact on society.
+          </p>
+        </div>
+
+        <div class="about-image-wrap reveal reveal-delay-2">
+          <img src="RUW_3922.jpg" alt="Dilanka Wijesena Graduation">
+        </div>
       </div>
-      <div class="exp-timeline">
-        <div class="exp-item reveal">
-          <div class="exp-period">Dec 2023 — Present</div>
-          <div class="exp-role">Lecturer</div>
-          <div class="exp-org">SLIIT City Uni · Colombo · (CQ University Australia Affiliation)</div>
-          <ul class="exp-bullets">
-            <li>Foundation Programme Coordinator & Associate Degree Programme Coordinator</li>
-            <li>Bridging Programme Coordinator — Dept. of Electronic & Electrical Engineering</li>
-            <li>Modules: Software Development for Embedded Systems, Mechatronics, Microprocessors, Digital Electronics Lab, Foundation Physics Lab</li>
-            <li>Mentor students in research topics, projects, and design; design hands-on lab books</li>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <div class="container">
+      <div class="s-label reveal">Peer-Reviewed Research</div>
+      <h2 class="s-title reveal">Academic <em>Publications</em></h2>
+      <div class="pub-list">
+
+        <div class="pub-item reveal">
+          <div class="pub-year">2025</div>
+          <div>
+            <a href="https://scholar.google.com/citations?user=a5Djx7QAAAAJ&hl=en&authuser=1" target="_blank"
+              class="pub-title">End-to-End Deep Learning for Lane Keeping Assist on Unmarked Sri Lankan Roads</a>
+            <div class="pub-authors">L. Jerith, D. P. Wijesena, L. Benorith, A. L. Josheph — School of Engineering,
+              SLIIT City Uni</div>
+            <span class="pub-venue-tag">IEEE ICIIS 2025 · University of Peradeniya · Dec 2025</span>
+          </div>
+          <span class="pub-badge badge-ieee">IEEE 2025</span>
+        </div>
+
+        <div class="pub-item reveal reveal-delay-1">
+          <div class="pub-year">2023</div>
+          <div>
+            <a href="https://scholar.google.com/citations?user=a5Djx7QAAAAJ&hl=en&authuser=1" target="_blank"
+              class="pub-title">Transformer Load Forecasting Method Based on SARIMA, FBProphet and LSTM Models</a>
+            <div class="pub-authors">D. P. Wijesena, K. Bandara, P. Tennakoon, B. Wickramasinghe — Wayamba University &
+              Ceylon Electricity Board</div>
+            <span class="pub-venue-tag">IEEE ICIIS 2023 · University of Peradeniya · Aug 2023</span>
+          </div>
+          <span class="pub-badge badge-ieee">IEEE 2023</span>
+        </div>
+
+        <div class="pub-item reveal reveal-delay-2">
+          <div class="pub-year">2021</div>
+          <div>
+            <a href="https://scholar.google.com/citations?user=a5Djx7QAAAAJ&hl=en&authuser=1" target="_blank"
+              class="pub-title">Design of an Automatic Body Temperature Measurement and Hand Sanitizing System with
+              Access Controlling</a>
+            <div class="pub-authors">D. P. Wijesena, D. G. Darshani, S. W. M. Wickramasinghe — Dept. of
+              Electrotechnology, Wayamba University</div>
+            <span class="pub-venue-tag">ICIET 2021 · pp. 42–49</span>
+          </div>
+          <span class="pub-badge badge-conf">Conference</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="s-label reveal">Selected Work</div>
+      <h2 class="s-title reveal">Projects & <em>Research</em></h2>
+      <div class="projects-masonry">
+
+        <div class="proj-card reveal">
+          <div class="proj-num">01</div>
+          <div class="proj-status">
+            <div class="proj-status-dot dot-done"></div>
+            <span class="proj-status-text">Completed 2025</span>
+          </div>
+          <h3 class="proj-title">Disagreement-Driven AI–Human Interaction Framework</h3>
+          <div class="proj-img-wrap">
+            <img src="assets/proj1.png" alt="Disagreement-Driven AI–Human Interaction Framework">
+          </div>
+          <p class="proj-desc">A safety framework pairing human input with CNN predictions. When divergence exceeds a
+            defined threshold, life-critical alerts are issued to the driver — applied to lane keeping on unmarked Sri
+            Lankan roads.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Deep Learning</span>
+            <span class="proj-tag">CNN</span>
+            <span class="proj-tag">Human-AI Safety</span>
+            <span class="proj-tag">Autonomous Driving</span>
+          </div>
+        </div>
+
+        <div class="proj-card reveal reveal-delay-1">
+          <div class="proj-num">02</div>
+          <div class="proj-status">
+            <div class="proj-status-dot" style="background:#2c8a5f"></div>
+            <span class="proj-status-text">Ongoing</span>
+          </div>
+          <h3 class="proj-title">ML-Based Backup Battery Management Unit</h3>
+          <div class="proj-img-wrap">
+            <img src="assets/proj2.png" alt="ML-Based Backup Battery Management Unit">
+          </div>
+          <p class="proj-desc">Intelligent BMS leveraging machine learning for predictive health monitoring, optimal
+            charging strategies, and real-time fault detection in backup power systems.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Machine Learning</span>
+            <span class="proj-tag">BMS</span>
+            <span class="proj-tag">IoT</span>
+            <span class="proj-tag">Power Electronics</span>
+          </div>
+        </div>
+
+        <div class="proj-card reveal reveal-delay-2">
+          <div class="proj-num">03</div>
+          <div class="proj-status">
+            <div class="proj-status-dot dot-done"></div>
+            <span class="proj-status-text">Completed 2025</span>
+          </div>
+          <h3 class="proj-title">Robust Anti-Theft System Counteracting CAN Bus Vulnerabilities</h3>
+          <div class="proj-img-wrap">
+            <img src="assets/proj3.png" alt="Robust Anti-Theft System Counteracting CAN Bus Vulnerabilities">
+          </div>
+          <p class="proj-desc">Vehicle security system designed to detect and prevent modern CAN Bus-based theft through
+            cryptographic anomaly detection and real-time intervention. Supervised undergraduate project.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">CAN Bus</span>
+            <span class="proj-tag">Cybersecurity</span>
+            <span class="proj-tag">Embedded C</span>
+            <span class="proj-tag">Automotive</span>
+          </div>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-num">04</div>
+          <div class="proj-status">
+            <div class="proj-status-dot dot-done"></div>
+            <span class="proj-status-text">Completed 2022</span>
+          </div>
+          <h3 class="proj-title">Transformer Maintenance Optimisation — Ceylon Electricity Board</h3>
+          <div class="proj-img-wrap">
+            <img src="assets/proj4.png" alt="Transformer Maintenance Optimisation — Ceylon Electricity Board">
+          </div>
+          <p class="proj-desc">Individual research for CEB: developed SARIMA, FB-Prophet, and LSTM forecasting models
+            for 4 interconnected 132kV grid substations, plus a web app for maintenance scheduling. LSTM achieved ~70.4%
+            avg improvement.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">LSTM</span>
+            <span class="proj-tag">SARIMA</span>
+            <span class="proj-tag">FB-Prophet</span>
+            <span class="proj-tag">Power Systems</span>
+            <span class="proj-tag">IEEE Published</span>
+          </div>
+        </div>
+
+        <div class="proj-card reveal reveal-delay-1">
+          <div class="proj-num">05</div>
+          <div class="proj-status">
+            <div class="proj-status-dot dot-done"></div>
+            <span class="proj-status-text">Completed 2021</span>
+          </div>
+          <h3 class="proj-title">Raccoon AI Business Intelligence Platform — Sri Lanka Telecom</h3>
+          <div class="proj-img-wrap">
+            <img src="assets/proj5.png" alt="Raccoon AI Business Intelligence Platform — Sri Lanka Telecom">
+          </div>
+          <p class="proj-desc">Enterprise ML platform for SLT running production machine learning workloads. Integrated
+            pre-programmed algorithms, interactive dataset exploration, GPS bus tracking via IoT, and scalable data
+            visualisations.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Python</span>
+            <span class="proj-tag">ML Platform</span>
+            <span class="proj-tag">IoT / GPS</span>
+            <span class="proj-tag">Data Analytics</span>
+          </div>
+        </div>
+
+        <div class="proj-card reveal reveal-delay-2">
+          <div class="proj-num">06</div>
+          <div class="proj-status">
+            <div class="proj-status-dot dot-done"></div>
+            <span class="proj-status-text">Completed 2020 · Published</span>
+          </div>
+          <h3 class="proj-title">Automatic Temperature Measurement & Hand Sanitizer with Access Control</h3>
+          <div class="proj-img-wrap">
+            <img src="assets/proj6.png" alt="Automatic Temperature Measurement & Hand Sanitizer with Access Control">
+          </div>
+          <p class="proj-desc">Arduino-based non-contact COVID-19 safety system combining MLX90614 temperature sensing,
+            ultrasonic detection, automated sanitization, and occupancy-based gate control. Published at ICIET 2021.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Arduino</span>
+            <span class="proj-tag">Sensors</span>
+            <span class="proj-tag">Embedded</span>
+            <span class="proj-tag">COVID-19</span>
+            <span class="proj-tag">Published</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="s-label reveal">Career</div>
+      <h2 class="s-title reveal"><em>Professional</em> Experience</h2>
+      <div class="exp-grid">
+        <div class="exp-sidebar reveal">
+          <p class="exp-sidebar-title">Positions held</p>
+          <ul class="exp-filter">
+            <li class="active">Academic</li>
+            <li>Engineering</li>
+            <li>Research</li>
+            <li>Internship</li>
           </ul>
         </div>
-        <div class="exp-item reveal reveal-delay-1">
-          <div class="exp-period">Dec 2022 — Dec 2023</div>
-          <div class="exp-role">Electrical & Electronic Engineer</div>
-          <div class="exp-org">Richard Pieris & Company PLC — Soran Ltd · Sri Lanka</div>
-          <ul class="exp-bullets">
-            <li>Developed corporate websites: EEVIO, SEN-NET, and Soran Shopify 3D printer store</li>
-            <li>Designed inverters and battery packs with BMS for energy storage systems</li>
-            <li>3D modelling, printing guide design, and ongoing R&D activities</li>
-          </ul>
-        </div>
-        <div class="exp-item reveal reveal-delay-2">
-          <div class="exp-period">May 2022 — Nov 2022</div>
-          <div class="exp-role">Assistant Engineer</div>
-          <div class="exp-org">Clarion International · Rajagiriya, Sri Lanka</div>
-          <ul class="exp-bullets">
-            <li>Designed and implemented capacitor bank for power factor correction</li>
-            <li>Conducted surge protection, lightning protection, earth testing, and power analysis</li>
-          </ul>
-        </div>
-        <div class="exp-item reveal">
-          <div class="exp-period">May 2021 — Jan 2022</div>
-          <div class="exp-role">Research & Development Intern</div>
-          <div class="exp-org">Sri Lanka Telecom PLC · Colombo</div>
-          <ul class="exp-bullets">
-            <li>Contributed to the Raccoon AI Business Intelligence Platform (ML workloads + visualisation)</li>
-            <li>Developed IoT-based GPS Bus Tracking System for real-time fleet monitoring</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section id="education">
-  <div class="container">
-    <div class="s-label reveal">Academic Background</div>
-    <h2 class="s-title reveal"><em>Education</em> & Qualifications</h2>
-    <div class="edu-cards">
-      <div class="edu-card reveal">
-        <div class="edu-degree">MSc in Artificial Intelligence</div>
-        <div class="edu-uni">University of Moratuwa · 2025 – Present</div>
-        <div class="edu-detail">Currently pursuing MSc AI, focusing on advanced machine learning, deep learning architectures, and intelligent systems design.</div>
-      </div>
-      <div class="edu-card reveal reveal-delay-1">
-        <div class="edu-degree">B.Eng.Tech (Hons) in Electrotechnology</div>
-        <div class="edu-uni">Wayamba University of Sri Lanka · 2017 – 2022</div>
-        <div class="edu-detail">First Class Honours. Best Overall Performance — 2016/17 Batch. Recipient of the <strong>Abans Engineering Gold Medal</strong> for best performance in the Faculty of Technology. Awarded at Convocation, 9 August 2023.</div>
-        <span class="gpa-pill">GPA: 3.83 / 4.00</span>
-      </div>
-      <div class="edu-card reveal reveal-delay-2">
-        <div class="edu-degree">NVQ Level 3 — Electrician</div>
-        <div class="edu-uni">Tertiary & Vocational Education Commission · 2017</div>
-        <div class="edu-detail">National Certificate covering electrical estimation, domestic single-phase wiring, industrial installation, and fault inspection/repair.</div>
-      </div>
-      <div class="edu-card reveal reveal-delay-3">
-        <div class="edu-degree">Certifications & Professional Development</div>
-        <div class="edu-uni">2017 – 2024</div>
-        <div class="edu-detail">
-          Python Programming: A Concise Introduction — Wesleyan University via Coursera (Aug 2023) ·
-          Python for Beginners — University of Moratuwa CODL (Aug 2023) ·
-          Machine Learning Master Class ·
-          Full Stack Developer Course — University of Moratuwa ·
-          English for Professionals — University of Peradeniya (2017) ·
-          Duolingo English Test: 115 (Jan 2024)
+        <div class="exp-timeline">
+          <div class="exp-item reveal">
+            <div class="exp-period">Dec 2023 — Present</div>
+            <div class="exp-role">Lecturer</div>
+            <div class="exp-org">SLIIT City Uni · Colombo · (CQ University Australia Affiliation)</div>
+            <ul class="exp-bullets">
+              <li>Foundation Programme Coordinator & Associate Degree Programme Coordinator</li>
+              <li>Bridging Programme Coordinator — Dept. of Electronic & Electrical Engineering</li>
+              <li>Modules: Software Development for Embedded Systems, Mechatronics, Microprocessors, Digital Electronics
+                Lab, Foundation Physics Lab</li>
+              <li>Mentor students in research topics, projects, and design; design hands-on lab books</li>
+            </ul>
+          </div>
+          <div class="exp-item reveal reveal-delay-1">
+            <div class="exp-period">Dec 2022 — Dec 2023</div>
+            <div class="exp-role">Electrical & Electronic Engineer</div>
+            <div class="exp-org">Richard Pieris & Company PLC — Soran Ltd · Sri Lanka</div>
+            <ul class="exp-bullets">
+              <li>Developed corporate websites: EEVIO, SEN-NET, and Soran Shopify 3D printer store</li>
+              <li>Designed inverters and battery packs with BMS for energy storage systems</li>
+              <li>3D modelling, printing guide design, and ongoing R&D activities</li>
+            </ul>
+          </div>
+          <div class="exp-item reveal reveal-delay-2">
+            <div class="exp-period">May 2022 — Nov 2022</div>
+            <div class="exp-role">Assistant Engineer</div>
+            <div class="exp-org">Clarion International · Rajagiriya, Sri Lanka</div>
+            <ul class="exp-bullets">
+              <li>Designed and implemented capacitor bank for power factor correction</li>
+              <li>Conducted surge protection, lightning protection, earth testing, and power analysis</li>
+            </ul>
+          </div>
+          <div class="exp-item reveal">
+            <div class="exp-period">May 2021 — Jan 2022</div>
+            <div class="exp-role">Research & Development Intern</div>
+            <div class="exp-org">Sri Lanka Telecom PLC · Colombo</div>
+            <ul class="exp-bullets">
+              <li>Contributed to the Raccoon AI Business Intelligence Platform (ML workloads + visualisation)</li>
+              <li>Developed IoT-based GPS Bus Tracking System for real-time fleet monitoring</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SKILLS -->
-<section id="skills">
-  <div class="container">
-    <div class="s-label reveal">Technical Capabilities</div>
-    <h2 class="s-title reveal">Skills & <em>Expertise</em></h2>
-    <div class="skills-wrapper">
-      <div class="skill-block reveal">
-        <div class="skill-block-title">AI & Machine Learning</div>
-        <div class="skill-cloud">
-          <span class="skill-chip">TensorFlow</span>
-          <span class="skill-chip">LSTM / RNN</span>
-          <span class="skill-chip">CNN</span>
-          <span class="skill-chip">SARIMA</span>
-          <span class="skill-chip">FB-Prophet</span>
-          <span class="skill-chip">scikit-learn</span>
-          <span class="skill-chip">pandas</span>
-          <span class="skill-chip">NumPy</span>
-          <span class="skill-chip">Matplotlib / Seaborn</span>
-          <span class="skill-chip">SymPy</span>
-          <span class="skill-chip">MATLAB</span>
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="container">
+      <div class="s-label reveal">Academic Background</div>
+      <h2 class="s-title reveal"><em>Education</em> & Qualifications</h2>
+      <div class="edu-cards">
+        <div class="edu-card reveal">
+          <div class="edu-degree">MSc in Artificial Intelligence</div>
+          <div class="edu-uni">University of Moratuwa · 2025 – Present</div>
+          <div class="edu-detail">Currently pursuing MSc AI, focusing on advanced machine learning, deep learning
+            architectures, and intelligent systems design.</div>
         </div>
-      </div>
-      <div class="skill-block reveal reveal-delay-1">
-        <div class="skill-block-title">Programming Languages</div>
-        <div class="skill-cloud">
-          <span class="skill-chip">Python (Proficient)</span>
-          <span class="skill-chip">C / C++</span>
-          <span class="skill-chip">Java</span>
-          <span class="skill-chip">PHP</span>
-          <span class="skill-chip">JavaScript</span>
-          <span class="skill-chip">HTML5 / CSS3</span>
-          <span class="skill-chip">MATLAB</span>
+        <div class="edu-card reveal reveal-delay-1">
+          <div class="edu-degree">B.Eng.Tech (Hons) in Electrotechnology</div>
+          <div class="edu-uni">Wayamba University of Sri Lanka · 2017 – 2022</div>
+          <div class="edu-detail">First Class Honours. Best Overall Performance — 2016/17 Batch. Recipient of the
+            <strong>Abans Engineering Gold Medal</strong> for best performance in the Faculty of Technology. Awarded at
+            Convocation, 9 August 2023.</div>
+          <span class="gpa-pill">GPA: 3.83 / 4.00</span>
         </div>
-      </div>
-      <div class="skill-block reveal reveal-delay-2">
-        <div class="skill-block-title">Embedded & Hardware</div>
-        <div class="skill-cloud">
-          <span class="skill-chip">Arduino</span>
-          <span class="skill-chip">ESP32</span>
-          <span class="skill-chip">Raspberry Pi</span>
-          <span class="skill-chip">PIC Microcontroller</span>
-          <span class="skill-chip">PLC Programming</span>
-          <span class="skill-chip">KiCad / PCB Design</span>
-          <span class="skill-chip">Proteus</span>
-          <span class="skill-chip">MPLAB</span>
-          <span class="skill-chip">Multisim</span>
-          <span class="skill-chip">MPU6050 / IMU</span>
+        <div class="edu-card reveal reveal-delay-2">
+          <div class="edu-degree">NVQ Level 3 — Electrician</div>
+          <div class="edu-uni">Tertiary & Vocational Education Commission · 2017</div>
+          <div class="edu-detail">National Certificate covering electrical estimation, domestic single-phase wiring,
+            industrial installation, and fault inspection/repair.</div>
         </div>
-      </div>
-      <div class="skill-block reveal reveal-delay-3">
-        <div class="skill-block-title">Web, Design & Tools</div>
-        <div class="skill-cloud">
-          <span class="skill-chip">Flask</span>
-          <span class="skill-chip">Bootstrap</span>
-          <span class="skill-chip">Shopify</span>
-          <span class="skill-chip">SketchUp 3D</span>
-          <span class="skill-chip">3D Printing</span>
-          <span class="skill-chip">Git</span>
-          <span class="skill-chip">IoT Systems</span>
+        <div class="edu-card reveal reveal-delay-3">
+          <div class="edu-degree">Certifications & Professional Development</div>
+          <div class="edu-uni">2017 – 2024</div>
+          <div class="edu-detail">
+            Python Programming: A Concise Introduction — Wesleyan University via Coursera (Aug 2023) ·
+            Python for Beginners — University of Moratuwa CODL (Aug 2023) ·
+            Machine Learning Master Class ·
+            Full Stack Developer Course — University of Moratuwa ·
+            English for Professionals — University of Peradeniya (2017) ·
+            Duolingo English Test: 115 (Jan 2024)
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="container">
-    <div class="contact-inner">
-      <div class="contact-left reveal">
-        <div class="s-label">Get in Touch</div>
-        <h2 class="s-title">Let's <em>Connect</em></h2>
-        <a href="mailto:dilankapwijesena@gmail.com" class="contact-email-link">dilankapwijesena@gmail.com</a>
-        <div class="contact-links">
-          <a href="https://www.linkedin.com/in/dilanka-wijesena-457183203" target="_blank" class="contact-row">
-            <div class="contact-row-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-            </div>
-            <div>
-              <span class="contact-row-label">LinkedIn</span>
-              <span class="contact-row-val">Dilanka Wijesena</span>
-            </div>
-          </a>
-          <a href="https://github.com/Dilankawusl" target="_blank" class="contact-row">
-            <div class="contact-row-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-            </div>
-            <div>
-              <span class="contact-row-label">GitHub</span>
-              <span class="contact-row-val">Dilankawusl</span>
-            </div>
-          </a>
-          <a href="https://scholar.google.com/citations?user=a5Djx7QAAAAJ&hl=en&authuser=1" target="_blank" class="contact-row">
-            <div class="contact-row-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
-            </div>
-            <div>
-              <span class="contact-row-label">Google Scholar</span>
-              <span class="contact-row-val">Dilanka P. Wijesena</span>
-            </div>
-          </a>
-          <a href="tel:+94770278631" class="contact-row">
-            <div class="contact-row-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.88 14a19.79 19.79 0 01-3.07-8.67A2 2 0 013.79 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-            </div>
-            <div>
-              <span class="contact-row-label">Phone</span>
-              <span class="contact-row-val">+94 077 027 8631</span>
-            </div>
-          </a>
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="s-label reveal">Technical Capabilities</div>
+      <h2 class="s-title reveal">Skills & <em>Expertise</em></h2>
+      <div class="skills-wrapper">
+        <div class="skill-block reveal">
+          <div class="skill-block-title">AI & Machine Learning</div>
+          <div class="skill-cloud">
+            <span class="skill-chip">TensorFlow</span>
+            <span class="skill-chip">LSTM / RNN</span>
+            <span class="skill-chip">CNN</span>
+            <span class="skill-chip">SARIMA</span>
+            <span class="skill-chip">FB-Prophet</span>
+            <span class="skill-chip">scikit-learn</span>
+            <span class="skill-chip">pandas</span>
+            <span class="skill-chip">NumPy</span>
+            <span class="skill-chip">Matplotlib / Seaborn</span>
+            <span class="skill-chip">SymPy</span>
+            <span class="skill-chip">MATLAB</span>
+          </div>
+        </div>
+        <div class="skill-block reveal reveal-delay-1">
+          <div class="skill-block-title">Programming Languages</div>
+          <div class="skill-cloud">
+            <span class="skill-chip">Python (Proficient)</span>
+            <span class="skill-chip">C / C++</span>
+            <span class="skill-chip">Java</span>
+            <span class="skill-chip">PHP</span>
+            <span class="skill-chip">JavaScript</span>
+            <span class="skill-chip">HTML5 / CSS3</span>
+            <span class="skill-chip">MATLAB</span>
+          </div>
+        </div>
+        <div class="skill-block reveal reveal-delay-2">
+          <div class="skill-block-title">Embedded & Hardware</div>
+          <div class="skill-cloud">
+            <span class="skill-chip">Arduino</span>
+            <span class="skill-chip">ESP32</span>
+            <span class="skill-chip">Raspberry Pi</span>
+            <span class="skill-chip">PIC Microcontroller</span>
+            <span class="skill-chip">PLC Programming</span>
+            <span class="skill-chip">KiCad / PCB Design</span>
+            <span class="skill-chip">Proteus</span>
+            <span class="skill-chip">MPLAB</span>
+            <span class="skill-chip">Multisim</span>
+            <span class="skill-chip">MPU6050 / IMU</span>
+          </div>
+        </div>
+        <div class="skill-block reveal reveal-delay-3">
+          <div class="skill-block-title">Web, Design & Tools</div>
+          <div class="skill-cloud">
+            <span class="skill-chip">Flask</span>
+            <span class="skill-chip">Bootstrap</span>
+            <span class="skill-chip">Shopify</span>
+            <span class="skill-chip">SketchUp 3D</span>
+            <span class="skill-chip">3D Printing</span>
+            <span class="skill-chip">Git</span>
+            <span class="skill-chip">IoT Systems</span>
+          </div>
         </div>
       </div>
-      <div class="contact-right reveal reveal-delay-1">
-        <div class="contact-info-cell">
-          <div class="cic-label">Full Name</div>
-          <div class="cic-val">Mallawa Arachchige Dilanka Piumal Wijesena</div>
-        </div>
-        <div class="contact-info-cell">
-          <div class="cic-label">Location</div>
-          <div class="cic-val">Matale, Sri Lanka</div>
-        </div>
-        <div class="contact-info-cell">
-          <div class="cic-label">Current Position</div>
-          <div class="cic-val">Lecturer — SLIIT City Uni, Colombo</div>
-        </div>
-        <div class="contact-info-cell">
-          <div class="cic-label">Current Study</div>
-          <div class="cic-val">MSc Artificial Intelligence — University of Moratuwa</div>
-        </div>
-        <div class="contact-info-cell">
-          <div class="cic-label">Research Interests</div>
-          <div class="cic-val" style="font-family:'Space Grotesk',sans-serif; font-size:0.88rem; font-weight:400;">Machine Learning · Artificial Intelligence · Embedded Systems · IoT</div>
-        </div>
-        <div class="contact-info-cell">
-          <div class="cic-label">Status</div>
-          <div class="cic-val" style="color:#1a8a5c;">Open to PhD Opportunities</div>
-        </div>
-      </div>
-
-      <!-- CONTACT FORM -->
-      <div class="contact-form-col reveal reveal-delay-2">
-        <div class="cic-label" style="margin-bottom: 1.5rem;">Send a Message</div>
-        <form action="https://formsubmit.co/dilankapwijesena@gmail.com" method="POST" class="contact-form">
-          <!-- Configuration for formsubmit.co -->
-          <input type="hidden" name="_subject" value="New Message from Portfolio Website!">
-          <input type="hidden" name="_captcha" value="false">
-          
-          <input type="text" name="name" placeholder="Full Name" required>
-          <input type="email" name="email" placeholder="Email Address" required>
-          <textarea name="message" placeholder="Your Message..." rows="5" required></textarea>
-          
-          <button type="submit" class="btn-ink" style="width: 100%; justify-content: center;">Send Message</button>
-        </form>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <p>© 2026 Dilanka Wijesena · Matale, Sri Lanka</p>
-  <p>Document updated March 2026</p>
-</footer>
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-left reveal">
+          <div class="s-label">Get in Touch</div>
+          <h2 class="s-title">Let's <em>Connect</em></h2>
+          <a href="mailto:dilankapwijesena@gmail.com" class="contact-email-link">dilankapwijesena@gmail.com</a>
+          <div class="contact-links">
+            <a href="https://www.linkedin.com/in/dilanka-wijesena-457183203" target="_blank" class="contact-row">
+              <div class="contact-row-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </div>
+              <div>
+                <span class="contact-row-label">LinkedIn</span>
+                <span class="contact-row-val">Dilanka Wijesena</span>
+              </div>
+            </a>
+            <a href="https://github.com/Dilankawusl" target="_blank" class="contact-row">
+              <div class="contact-row-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+                </svg>
+              </div>
+              <div>
+                <span class="contact-row-label">GitHub</span>
+                <span class="contact-row-val">Dilankawusl</span>
+              </div>
+            </a>
+            <a href="https://scholar.google.com/citations?user=a5Djx7QAAAAJ&hl=en&authuser=1" target="_blank"
+              class="contact-row">
+              <div class="contact-row-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                  <path
+                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                </svg>
+              </div>
+              <div>
+                <span class="contact-row-label">Google Scholar</span>
+                <span class="contact-row-val">Dilanka P. Wijesena</span>
+              </div>
+            </a>
+            <a href="tel:+94770278631" class="contact-row">
+              <div class="contact-row-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.88 14a19.79 19.79 0 01-3.07-8.67A2 2 0 013.79 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+                </svg>
+              </div>
+              <div>
+                <span class="contact-row-label">Phone</span>
+                <span class="contact-row-val">+94 077 027 8631</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-right reveal reveal-delay-1">
+          <div class="contact-info-cell">
+            <div class="cic-label">Full Name</div>
+            <div class="cic-val">Mallawa Arachchige Dilanka Piumal Wijesena</div>
+          </div>
+          <div class="contact-info-cell">
+            <div class="cic-label">Location</div>
+            <div class="cic-val">Matale, Sri Lanka</div>
+          </div>
+          <div class="contact-info-cell">
+            <div class="cic-label">Current Position</div>
+            <div class="cic-val">Lecturer — SLIIT City Uni, Colombo</div>
+          </div>
+          <div class="contact-info-cell">
+            <div class="cic-label">Current Study</div>
+            <div class="cic-val">MSc Artificial Intelligence — University of Moratuwa</div>
+          </div>
+          <div class="contact-info-cell">
+            <div class="cic-label">Research Interests</div>
+            <div class="cic-val" style="font-family:'Space Grotesk',sans-serif; font-size:0.88rem; font-weight:400;">
+              Machine Learning · Artificial Intelligence · Embedded Systems · IoT</div>
+          </div>
+          <div class="contact-info-cell">
+            <div class="cic-label">Status</div>
+            <div class="cic-val" style="color:#1a8a5c;">Open to PhD Opportunities</div>
+          </div>
+        </div>
 
-<script>
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
-}, { threshold: 0.08 });
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+        <!-- CONTACT FORM -->
+        <div class="contact-form-col reveal reveal-delay-2">
+          <div class="cic-label" style="margin-bottom: 1.5rem;">Send a Message</div>
+          <form action="https://formsubmit.co/dilankapwijesena@gmail.com" method="POST" class="contact-form">
+            <!-- Configuration for formsubmit.co -->
+            <input type="hidden" name="_subject" value="New Message from Portfolio Website!">
+            <input type="hidden" name="_captcha" value="false">
 
-// nav scroll highlight
-const navAs = document.querySelectorAll('.nav-links a');
-const secs = document.querySelectorAll('section[id]');
-window.addEventListener('scroll', () => {
-  let cur = '';
-  secs.forEach(s => { if(window.scrollY >= s.offsetTop - 120) cur = s.id; });
-  navAs.forEach(a => { a.style.color = a.getAttribute('href')==='#'+cur ? 'var(--gold)' : ''; });
-});
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <textarea name="message" placeholder="Your Message..." rows="5" required></textarea>
 
-// dark mode toggle
-const themeToggle = document.getElementById('theme-toggle');
+            <button type="submit" class="btn-ink" style="width: 100%; justify-content: center;">Send Message</button>
+          </form>
+        </div>
 
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-  document.documentElement.setAttribute('data-theme', 'dark');
-}
+      </div>
+    </div>
+  </section>
 
-themeToggle.addEventListener('click', () => {
-  // Add an animating class for extra effects
-  themeToggle.classList.add('animating');
-  setTimeout(() => themeToggle.classList.remove('animating'), 400);
+  <footer>
+    <p>© 2026 Dilanka Wijesena · Matale, Sri Lanka</p>
+    <p>Document updated March 2026</p>
+  </footer>
 
-  let currentTheme = document.documentElement.getAttribute('data-theme');
-  let targetTheme = currentTheme === 'dark' ? 'light' : 'dark';
-  
-  document.documentElement.setAttribute('data-theme', targetTheme);
-  localStorage.setItem('theme', targetTheme);
-});
-</script>
-<script src="particles.js"></script>
+  <script>
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    // nav scroll highlight
+    const navAs = document.querySelectorAll('.nav-links a');
+    const secs = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+      let cur = '';
+      secs.forEach(s => { if (window.scrollY >= s.offsetTop - 120) cur = s.id; });
+      navAs.forEach(a => { a.style.color = a.getAttribute('href') === '#' + cur ? 'var(--gold)' : ''; });
+    });
+
+    // dark mode toggle
+    const themeToggle = document.getElementById('theme-toggle');
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      // Add an animating class for extra effects
+      themeToggle.classList.add('animating');
+      setTimeout(() => themeToggle.classList.remove('animating'), 400);
+
+      let currentTheme = document.documentElement.getAttribute('data-theme');
+      let targetTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+      document.documentElement.setAttribute('data-theme', targetTheme);
+      localStorage.setItem('theme', targetTheme);
+    });
+  </script>
+  <script src="particles.js"></script>
 </body>
+
 </html>
