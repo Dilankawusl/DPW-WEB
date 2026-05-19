@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Updates & Events | Dilanka Wijesena</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <style>
+    /* Updates specific styles that can be moved to styles.css later if needed */
+    .updates-header {
+      padding-top: 8rem;
+      padding-bottom: 3rem;
+      text-align: center;
+    }
+    
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+    
+    .filter-btn {
+      background: transparent;
+      border: none;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      position: relative;
+      transition: color 0.3s;
+    }
+    
+    .filter-btn:hover, .filter-btn.active {
+      color: var(--gold);
+    }
+    
+    .filter-btn::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width 0.3s ease;
+    }
+    
+    .filter-btn:hover::after, .filter-btn.active::after {
+      width: 100%;
+    }
+
+    .updates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+      padding-bottom: 5rem;
+    }
+
+    .update-card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .update-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      border-color: var(--border-strong);
+    }
+
+    [data-theme="dark"] .update-card:hover {
+      box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    }
+
+    .update-img-wrap {
+      width: 100%;
+      height: 220px;
+      background: var(--paper2);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .update-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .update-card:hover .update-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .update-content {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .update-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .update-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    .update-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+      background: var(--paper2);
+      color: var(--gold-light);
+      border: 1px solid var(--border);
+    }
+
+    .update-title {
+      font-family: 'Outfit', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 0.8rem;
+      color: var(--ink);
+    }
+
+    .update-desc {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      flex: 1;
+    }
+
+    .update-action {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+      color: var(--blue);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: auto;
+      transition: color 0.2s;
+    }
+
+    .update-action:hover {
+      color: var(--gold);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- BACKGROUND CANVAS -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- NAV -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">Dilanka <span>Wijesena</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#publications">Research</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#education">Education</a></li>
+        <li><a href="updates.html" style="color: var(--gold);">Updates</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="updates-header">
+    <div class="container">
+      <div class="s-label reveal" style="justify-content: center; margin-bottom: 1.5rem;">News & Activities</div>
+      <h1 class="s-title reveal" style="text-align: center; margin-bottom: 1rem;">Updates & <em>Events</em></h1>
+      <p class="hero-desc reveal" style="margin: 0 auto 2rem; text-align: center;">
+        A timeline of my latest projects, academic workshops, professional certifications, and other significant milestones.
+      </p>
+    </div>
+  </section>
+
+  <!-- UPDATES CONTENT -->
+  <section id="updates-content" style="padding-top: 0;">
+    <div class="container">
+      
+
+
+      <!-- Updates Grid -->
+      <div class="updates-grid">
+
+        <!-- LinkedIn Post Embed -->
+        <div class="update-card reveal" data-category="event" style="padding: 0; display: flex; justify-content: center; background: transparent; box-shadow: none; border: none;">
+          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7462401982415134720" height="717" width="100%" frameborder="0" allowfullscreen="" title="Embedded post" style="border-radius: 8px;"></iframe>
+        </div>
+
+        <!-- LinkedIn Post Embed 2 -->
+        <div class="update-card reveal" data-category="event" style="padding: 0; display: flex; justify-content: center; background: transparent; box-shadow: none; border: none;">
+          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7462195256785092608" height="900" width="100%" frameborder="0" allowfullscreen="" title="Embedded post" style="border-radius: 8px;"></iframe>
+        </div>
+
+        <!-- LinkedIn Post Embed 3 -->
+        <div class="update-card reveal" data-category="event" style="padding: 0; display: flex; justify-content: center; background: transparent; box-shadow: none; border: none;">
+          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7447677048212389888" height="607" width="100%" frameborder="0" allowfullscreen="" title="Embedded post" style="border-radius: 8px;"></iframe>
+        </div>
+
+        <!-- LinkedIn Post Embed 4 -->
+        <div class="update-card reveal" data-category="event" style="padding: 0; display: flex; justify-content: center; background: transparent; box-shadow: none; border: none;">
+          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7436084057966354432" height="774" width="100%" frameborder="0" allowfullscreen="" title="Embedded post" style="border-radius: 8px;"></iframe>
+        </div>
+
+        <!-- LinkedIn Post Embed 5 -->
+        <div class="update-card reveal" data-category="event" style="padding: 0; display: flex; justify-content: center; background: transparent; box-shadow: none; border: none;">
+          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7417940461216260096" height="732" width="100%" frameborder="0" allowfullscreen="" title="Embedded post" style="border-radius: 8px;"></iframe>
+        </div>
+
+        <!-- LinkedIn Post Embed 6 -->
+        <div class="update-card reveal" data-category="event" style="padding: 0; display: flex; justify-content: center; background: transparent; box-shadow: none; border: none;">
+          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7388967077509799936" height="879" width="100%" frameborder="0" allowfullscreen="" title="Embedded post" style="border-radius: 8px;"></iframe>
+        </div>
+
+      </div>
+
+      <!-- View More Button -->
+      <div style="text-align: center; margin-top: 3rem;" class="reveal">
+        <a href="https://www.linkedin.com/in/dilanka-wijesena-457183203/" target="_blank" class="btn-ink" style="padding: 1rem 2.5rem; font-size: 0.8rem;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 0.5rem;">
+            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+          View More Updates on LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Dilanka Wijesena · Matale, Sri Lanka</p>
+  </footer>
+
+  <script>
+    // Intersection Observer for reveal animations
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    // Dark mode toggle
+    const themeToggle = document.getElementById('theme-toggle');
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      themeToggle.classList.add('animating');
+      setTimeout(() => themeToggle.classList.remove('animating'), 400);
+
+      let currentTheme = document.documentElement.getAttribute('data-theme');
+      let targetTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+      document.documentElement.setAttribute('data-theme', targetTheme);
+      localStorage.setItem('theme', targetTheme);
+    });
+
+
+  </script>
+  <script src="particles.js"></script>
+</body>
+
+</html>
