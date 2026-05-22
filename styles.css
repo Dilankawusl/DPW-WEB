@@ -439,6 +439,7 @@ section:nth-child(even) { background:var(--paper2); backdrop-filter: blur(12px);
   color: var(--muted);
   margin-bottom: 1.5rem;
   transition: color 0.5s ease;
+  text-align: justify;
 }
 .about-text:last-child {
   margin-bottom: 0;
@@ -649,6 +650,7 @@ section:nth-child(even) { background:var(--paper2); backdrop-filter: blur(12px);
   font-size:0.8rem; line-height:1.7;
   color:var(--muted); margin-bottom:1.2rem;
   transition:color 0.25s;
+  text-align: justify;
 }
 .proj-tags { display:flex; flex-wrap:wrap; gap:0.35rem; }
 .proj-tag {
@@ -777,7 +779,7 @@ section:nth-child(even) { background:var(--paper2); backdrop-filter: blur(12px);
   font-size:0.62rem; letter-spacing:0.07em;
   color:var(--blue-mid); margin-bottom:0.9rem;
 }
-.edu-detail { font-size:0.82rem; color:var(--muted); line-height:1.7; }
+.edu-detail { font-size:0.82rem; color:var(--muted); line-height:1.7; text-align: justify; }
 .gpa-pill {
   display:inline-block; margin-top:0.8rem;
   font-family:'JetBrains Mono',monospace;
