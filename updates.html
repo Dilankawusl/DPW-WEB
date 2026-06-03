@@ -71,17 +71,33 @@
     .update-card {
       background: var(--paper);
       border: 1px solid var(--border);
-      border-radius: 4px;
+      border-radius: 8px;
       overflow: hidden;
       transition: all 0.3s ease;
       display: flex;
       flex-direction: column;
+      padding: 1rem;
     }
 
     .update-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 15px 35px rgba(0,0,0,0.1);
       border-color: var(--border-strong);
+    }
+
+    .update-card .iframe-wrap {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .update-card iframe {
+      width: 100%;
+      max-width: 504px;
+      border-radius: 8px;
+      min-height: 627px;
     }
 
     [data-theme="dark"] .update-card:hover {
@@ -237,34 +253,60 @@
       <!-- Updates Grid -->
       <div class="updates-grid">
 
+        <!-- LinkedIn Post Embed 7 -->
+        <div class="update-card reveal" data-category="event">
+          <div class="iframe-wrap">
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7465006339740823553?collapsed=1" height="627" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+          </div>
+        </div>
+
         <!-- LinkedIn Post Embed -->
-        <div class="update-card reveal" data-category="event" style="padding: 0; display: flex; justify-content: center; background: transparent; box-shadow: none; border: none;">
-          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7462401982415134720" height="717" width="100%" frameborder="0" allowfullscreen="" title="Embedded post" style="border-radius: 8px;"></iframe>
+        <div class="update-card reveal" data-category="event">
+          <div class="iframe-wrap">
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7462401982415134720" height="717" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+          </div>
         </div>
 
         <!-- LinkedIn Post Embed 2 -->
-        <div class="update-card reveal" data-category="event" style="padding: 0; display: flex; justify-content: center; background: transparent; box-shadow: none; border: none;">
-          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7462195256785092608" height="900" width="100%" frameborder="0" allowfullscreen="" title="Embedded post" style="border-radius: 8px;"></iframe>
+        <div class="update-card reveal" data-category="event">
+          <div class="iframe-wrap">
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7462195256785092608" height="900" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+          </div>
         </div>
 
         <!-- LinkedIn Post Embed 3 -->
-        <div class="update-card reveal" data-category="event" style="padding: 0; display: flex; justify-content: center; background: transparent; box-shadow: none; border: none;">
-          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7447677048212389888" height="607" width="100%" frameborder="0" allowfullscreen="" title="Embedded post" style="border-radius: 8px;"></iframe>
+        <div class="update-card reveal" data-category="event">
+          <div class="iframe-wrap">
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7447677048212389888" height="607" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+          </div>
         </div>
 
         <!-- LinkedIn Post Embed 4 -->
-        <div class="update-card reveal" data-category="event" style="padding: 0; display: flex; justify-content: center; background: transparent; box-shadow: none; border: none;">
-          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7436084057966354432" height="774" width="100%" frameborder="0" allowfullscreen="" title="Embedded post" style="border-radius: 8px;"></iframe>
+        <div class="update-card reveal" data-category="event">
+          <div class="iframe-wrap">
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7436084057966354432" height="774" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+          </div>
         </div>
 
         <!-- LinkedIn Post Embed 5 -->
-        <div class="update-card reveal" data-category="event" style="padding: 0; display: flex; justify-content: center; background: transparent; box-shadow: none; border: none;">
-          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7417940461216260096" height="732" width="100%" frameborder="0" allowfullscreen="" title="Embedded post" style="border-radius: 8px;"></iframe>
+        <div class="update-card reveal" data-category="event">
+          <div class="iframe-wrap">
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7417940461216260096" height="732" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+          </div>
         </div>
 
         <!-- LinkedIn Post Embed 6 -->
-        <div class="update-card reveal" data-category="event" style="padding: 0; display: flex; justify-content: center; background: transparent; box-shadow: none; border: none;">
-          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7388967077509799936" height="879" width="100%" frameborder="0" allowfullscreen="" title="Embedded post" style="border-radius: 8px;"></iframe>
+        <div class="update-card reveal" data-category="event">
+          <div class="iframe-wrap">
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7388967077509799936" height="879" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+          </div>
+        </div>
+
+        <!-- LinkedIn Post Embed 7 -->
+        <div class="update-card reveal" data-category="event">
+          <div class="iframe-wrap">
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7465006339740823553?collapsed=1" height="627" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+          </div>
         </div>
 
       </div>
