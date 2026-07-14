@@ -493,9 +493,12 @@ section:nth-child(even) { background:var(--paper2); backdrop-filter: blur(12px);
 }
 .award-text span {
   font-family:'JetBrains Mono',monospace;
-  font-size:0.65rem; letter-spacing:0.1em;
+  font-size:0.9rem;
+  line-height:1.65;
+  max-width:770px;
   color:var(--inverted-text-muted);
-  margin-top:0.3rem; display:block;
+  margin-top:0.4rem;
+  display:block;
 }
 .award-gpa {
   font-family:'Outfit',serif;
@@ -973,6 +976,14 @@ footer .foot-logo {
   .exp-sidebar { display:none; }
   .contact-inner { grid-template-columns:1fr; }
   footer { padding:1.5rem; }
+}
+@media(max-width:850px){
+  .award-banner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    padding: 1.5rem;
+  }
 }
 @media(max-width:640px){
   .nav-links { display:none; }
