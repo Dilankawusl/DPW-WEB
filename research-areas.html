@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Areas | Dilanka Wijesena</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">Dilanka <span>Wijesena</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="research-areas.html" style="color: var(--gold);">Research Areas</a></li>
+        <li><a href="index.html#publications">Research</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#education">Education</a></li>
+        <li><a href="updates.html">Updates</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero" style="padding-top: 8rem;">
+    <div class="container">
+      <div class="s-label reveal">Research Focus</div>
+      <h1 class="s-title reveal">My <em>Research Areas</em></h1>
+      <p class="hero-desc reveal" style="margin-bottom: 0; max-width: 760px;">
+        I explore innovative technologies that transform intelligent systems into practical solutions for industry, healthcare, agriculture, robotics, and smart automation.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="research-spotlight reveal">
+        <div class="research-spotlight-main">
+          <div class="research-spotlight-badge">AI • Robotics • Smart Systems</div>
+          <h3>From intelligent algorithms to real-world engineering systems</h3>
+          <p>I work at the intersection of AI, robotics, embedded intelligence, and connected technologies to build practical systems for healthcare, automation, agriculture, and industry.</p>
+        </div>
+        <div class="research-spotlight-visual">
+          <img src="assets/proj5.png" alt="Research vision illustration">
+        </div>
+      </div>
+
+      <div class="research-interest-grid">
+        <article class="research-interest-card reveal">
+          <img src="assets/proj3.png" alt="Robotics and autonomous systems">
+          <div>
+            <h3>Artificial Intelligence</h3>
+            <p>Creating adaptive systems that can perceive, reason, and support real-world decisions.</p>
+          </div>
+        </article>
+
+        <article class="research-interest-card reveal reveal-delay-1">
+          <img src="assets/proj6.png" alt="Smart healthcare and IoT systems">
+          <div>
+            <h3>Machine Learning</h3>
+            <p>Applying predictive models for analytics, automation, and intelligent control.</p>
+          </div>
+        </article>
+
+        <article class="research-interest-card reveal reveal-delay-2">
+          <img src="assets/proj4.png" alt="Embedded systems hardware design">
+          <div>
+            <h3>Robotics &amp; Embedded Systems</h3>
+            <p>Designing autonomous platforms and efficient embedded solutions for smart environments.</p>
+          </div>
+        </article>
+
+        <article class="research-interest-card reveal">
+          <img src="assets/proj7.png" alt="IoT and connected systems">
+          <div>
+            <h3>IoT &amp; Smart Automation</h3>
+            <p>Connecting sensing, control, and data intelligence for industry, healthcare, and agriculture.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="research-interest-list reveal">
+        <div class="research-interest-list-header">
+          <h3>Core themes driving my research</h3>
+          <span>AI • ML • Robotics • IoT • Mechatronics • Automation</span>
+        </div>
+        <div class="research-chip-list">
+          <span>Artificial Intelligence (AI)</span>
+          <span>Machine Learning (ML)</span>
+          <span>Robotics &amp; Autonomous Systems</span>
+          <span>Embedded Systems</span>
+          <span>Internet of Things (IoT)</span>
+          <span>Mechatronics</span>
+          <span>Industrial Automation</span>
+          <span>Smart Agriculture</span>
+          <span>Computer Vision</span>
+          <span>Edge AI &amp; TinyML</span>
+          <span>Smart Healthcare Technologies</span>
+          <span>Intelligent Control Systems</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="particles.js"></script>
+</body>
+</html>
