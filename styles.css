@@ -522,19 +522,24 @@ section:nth-child(even) { background:var(--paper2); backdrop-filter: blur(12px);
 }
 .research-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.2rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.3rem;
 }
 .research-card {
   position: relative;
-  min-height: 220px;
-  border-radius: 16px;
+  min-height: 240px;
+  border-radius: 18px;
   overflow: hidden;
   border: 1px solid var(--border);
   background: linear-gradient(135deg, rgba(13,12,10,0.82), rgba(13,12,10,0.45)), var(--card-image);
   background-size: cover;
   background-position: center;
-  box-shadow: 0 14px 30px rgba(13,12,10,0.12);
+  box-shadow: 0 16px 35px rgba(13,12,10,0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.research-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(13,12,10,0.16);
 }
 .research-card::before {
   content: '';
@@ -585,20 +590,20 @@ section:nth-child(even) { background:var(--paper2); backdrop-filter: blur(12px);
 .research-qr-card {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
-  padding: 1rem 1.2rem;
+  gap: 1.4rem;
+  padding: 1.25rem 1.4rem;
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: 18px;
   background: var(--paper);
-  box-shadow: 0 12px 28px rgba(13,12,10,0.08);
+  box-shadow: 0 14px 30px rgba(13,12,10,0.08);
 }
 .research-qr-card img {
-  width: 120px;
-  height: 120px;
+  width: 220px;
+  height: 220px;
   object-fit: contain;
-  border-radius: 10px;
+  border-radius: 14px;
   background: #fff;
-  padding: 0.4rem;
+  padding: 0.6rem;
 }
 .research-qr-card h3 {
   font-family: 'Outfit', serif;
@@ -607,9 +612,24 @@ section:nth-child(even) { background:var(--paper2); backdrop-filter: blur(12px);
   color: var(--ink);
 }
 .research-qr-card p {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .research-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .research-qr-card {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 /* ─── AWARD BANNER ─── */
